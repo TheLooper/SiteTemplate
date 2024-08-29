@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <!--import CSS stylesheet-->
+    <link rel="stylesheet" href="styles.css">
+    <!--import CSS stylesheet from w3School to save time making social media icons, the alternative is to make a hyperlink image-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<!-- Create unordered list for the navigation menu-->
+<ul>
+  <!-- Create list for the navigation menu and link the pages to them-->
+ <li><a href="index.html">Home</a></li>
+ <li><a href="about.html">About</a></li>
+ <li><a href="contact.html">Contact</a></li>
+</ul>
+
+<body>
+  <!--You can also use inline CSS and JS to modify a single page without importing any style sheets using the style tag-->
+
+  <!--This example I will display the date and time using inline javascript with the script tag. -->
+    <script>
+        function updateDateTime() {
+          // Create variables for the date, display date, and display time.
+            var date = new Date();
+            var displayDate = date.toLocaleDateString();
+            var displayTime = date.toLocaleTimeString();
+            // Create ID named datetime
+            document.getElementById('datetime').innerHTML = displayDate + " " + displayTime;
+        }
+        // Create a timer and set it for 1000 miliseconds
+        setInterval(updateDateTime, 1000);
+        // Display the date and time immediately
+        updateDateTime();
+    </script>
+
+    <h1>Current Date and Time</h1>
+
+    <!--Display the time with a paragraph format and by the ID "datetime" -->
+      <p id="datetime"></p>
+      
+  <!--In this example we are formating the icons for facebook and twitter-->
+<style>
+  .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+  </style>
+  <h2>Style Social Media Buttons</h2>
+
+<!-- Add the icons and add the url you would like attched to the images -->
+<a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+<a href="https://www.x.com/" class="fa fa-twitter"></a>
+  </body>
+  <!--Coded by Looper-->
